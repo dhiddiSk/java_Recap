@@ -6,11 +6,11 @@ public class Customer {
 	private String address;
 	private double cashOnHand;
 	
-	Customer customerObject = new Customer();
-
-	public void purchaseCar(Vehicle vehicle, Employee employee, boolean finance) {
-		HandleCustomer hc = new HandleCustomer();
-		hc.HandleCustomerMethod(customerObject, finance, vehicle);
+	public Customer(String name, String address, double cashOnHand) {
+		super();
+		this.name = name;
+		this.address = address;
+		this.cashOnHand = cashOnHand;
 	}
 
 	public String getName() {
@@ -36,4 +36,9 @@ public class Customer {
 	public void setCashOnHand(double cashOnHand) {
 		this.cashOnHand = cashOnHand;
 	}
+	
+	public void purchaseCar(Vehicle vehicle, Employee employee, boolean finance) {
+		employee.HandleCustomerMethod(this, finance, vehicle);
+	}
+
 }

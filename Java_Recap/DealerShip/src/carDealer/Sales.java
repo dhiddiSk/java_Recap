@@ -11,8 +11,5 @@ public class Sales {
 		this.customerName = customerName;
 		this.customerAddress = customerAddress;
 	}
-	
-	public void sellToCustomer() {
-		
-	}
+
 }
