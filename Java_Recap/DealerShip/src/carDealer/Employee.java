@@ -26,6 +26,6 @@ public class Employee {
 	
 	private static void runCreditHistory(Customer cust1, int vehicleCost) {
 		System.out.println("Running the credit history");		
-	}	
-
+	}
+	
 }
