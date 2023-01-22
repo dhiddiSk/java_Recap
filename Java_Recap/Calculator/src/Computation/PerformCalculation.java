@@ -10,14 +10,13 @@ public class PerformCalculation {
 	static double operationResult = 0;
 
 	public static void main(String[] args) {
-		Scanner inputTheTypeOfOperation = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);
 		System.out.println("Enter the computation operations \"Add, Subtract, Multiply, Divide\" which you like to perform");
-		operation = (inputTheTypeOfOperation.nextLine()).toLowerCase();
-		System.out.println("Enter the values");
+		operation = (input.nextLine()).toLowerCase();
 		System.out.println("Enter first operand ");
-		operand1 = inputTheTypeOfOperation.nextDouble();
+		operand1 = input.nextDouble();
 		System.out.println("Enter the second value ");
-		operand2 = inputTheTypeOfOperation.nextDouble();
+		operand2 = input.nextDouble();
 		
 		switch(operation){
 		
@@ -33,11 +32,11 @@ public class PerformCalculation {
 		case "subtraction" : Subtraction sub = new Subtraction();
 							 operationResult = sub.operation(operand1, operand2);
 							 break;
-			default: System.out.println("Invalid operator");
+		default: System.out.println("Invalid operator");
 						break;
 		
 		}
-		inputTheTypeOfOperation.close();
-		System.out.println("result is "+operationResult);
+		input.close();
+		System.out.println("The result of operation is "+operationResult);
 	}
 }
