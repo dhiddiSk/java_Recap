@@ -8,6 +8,10 @@ public class Application {
 		
 		Human h = new Human();
 		walking(h);
+		
+		ALambdaInterface blockOfCode = () -> {
+			System.out.println("hello anonymous");
+		};
 	}
 	
 	public static void walking(Walkable w) {
