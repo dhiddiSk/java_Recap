@@ -30,6 +30,7 @@ public class Product {
 		 });
 		 
 		 task1.start();
+		 Thread.sleep(2000);
 		 task2.start();	 
 	 }
 }
